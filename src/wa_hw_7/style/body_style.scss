@@ -1,0 +1,108 @@
+@import './variebles.scss';
+@import "./mixins.scss";
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    @include minHeight;
+
+    body {
+        background: url("./assets/images/pattern.jpg");
+        @include zero_indents;
+        @include minHeight;
+
+        .page_wrapper {
+            max-width: 820px;
+            width: $page_height;
+            margin: $margin_center;
+            position: absolute;
+            @include central_placement;
+
+            .page_header {
+                padding: $page_padding;
+                color: $text_color;
+            }
+
+            .item {
+                height: 150px;
+                padding: $page_padding;
+
+                &__content {
+                    height: $page_height;
+                    position: relative;
+                }
+
+                &_icon {
+                    position: absolute;
+                    @include central_placement;
+                }
+            
+                &_title {
+                    position: absolute;
+                    bottom: $zero_value;
+                    left: $zero_value;
+                    padding: $page_padding;
+                    color: $text_color;
+                }
+
+                &_contact-repeat {
+                    background-color: #7e5b8c;
+                }
+
+                &_home {
+                    background-color: #3387ea;
+                }
+
+                &_contact {
+                    background-color: #f9be3e;
+                }
+
+                &_hire {
+                    background-color: #d3573e;
+                }
+
+                &_photos {
+                    background-color: #59b0e2;
+                }
+
+                &_about {
+                    background-color: #33af95;
+                }
+
+                &_about-repeat {
+                    background-color: #86a73f;
+                }
+
+                .blog {
+                    background-color: #151a26;
+                    color: $text_color;
+                    display: flex;
+
+                    &_image {
+                        height: $page_height;
+                        background: url("./assets/images/blog-image.png");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        flex: 0 0 30%;
+                    }
+
+                    &_text {
+                        padding: $page_padding;
+                        box-sizing: border-box;
+                        flex: 0 0 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .page_wrapper {
+        position: static;
+        top: initial;
+        left: initial;
+        transform: translate(0px, 0px);
+    }
+}
