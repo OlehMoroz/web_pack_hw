@@ -11,6 +11,7 @@ const baseConf = (_path) => {
     const entry = {
         index: ['babel-polyfill', './src/index/index.js'],
         wa_hw_7: ["./src/wa_hw_7/wa_hw_7.js"],
+        wa_hw_9: ["./src/wa_hw_9/wa_hw_9.js"],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
