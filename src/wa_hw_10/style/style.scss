@@ -1,0 +1,30 @@
+.traffic_lights {
+    width: 150px;
+    height: 500px;
+    border: 3px solid #000;
+    border-radius: 25px;
+    transform: translate(350%);
+    background-color: rgb(134, 134, 134);
+}
+
+.circle {
+    width: 90%;
+    height: 135px;
+    margin: 18px 5px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.red_light {
+    background-color: rgba(241, 135, 135, 0.582);
+}
+
+.yellow_light {
+    background-color: rgba(255, 200, 148, 0.61);
+}
+
+.green_light {
+    background-color: rgba(169, 255, 148, 0.521);
+}
+
