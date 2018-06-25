@@ -13,6 +13,7 @@ const baseConf = (_path) => {
         wa_hw_7: ["./src/wa_hw_7/wa_hw_7.js"],
         wa_hw_9: ["./src/wa_hw_9/wa_hw_9.js"],
         wa_hw_10: ["./src/wa_hw_10/wa_hw_10.js"],
+        wa_hw_11: ["./src/wa_hw_11/wa_hw_11.js"],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
