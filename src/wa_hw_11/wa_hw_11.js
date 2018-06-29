@@ -1,7 +1,16 @@
 import './wa_hw_11.scss'
 
-$('.accordion_title').next().hide();
-	$('.accordion_title').click(function(){
-	$(this).next().slideToggle(1000);
-	$('.accordion_title').not(this).next().stop(true,true).slideUp(1000);
-});
+const accordion = document.getElementsByClassName("accordion_title");
+let i;
+
+for (i = 0; i < accordion.length; i++) {
+	accordion[i].addEventListener('click', function() {
+    this.classList.toggle("active");
+    let accordion_body = this.nextElementSibling;
+    if (accordion_body.style.maxHeight){
+		accordion_body.style.maxHeight = null;
+    } else {
+		accordion_body.style.maxHeight = accordion_body.scrollHeight + "px";
+    } 
+  });
+}

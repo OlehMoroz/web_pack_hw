@@ -57,11 +57,17 @@ body {
 	justify-content: space-between;
 	cursor: pointer;
 }
- 
+
 .accordion_body {
-	padding: 15px;
 	margin: 0;
 	background: #fff;
+	overflow: hidden;
+	max-height: 0;
+    transition: max-height 0.3s;
+}
+
+.text {
+	padding: 15px;
 }
   
 .accordion_constituent:last-child .accordion_body {
@@ -70,4 +76,13 @@ body {
   
 .accordion_constituent:last-child .accordion_title {
 	border-radius: 0 0 4px 4px;
+}
+
+.accordion_title:after {
+    content: '\23F7';
+	color: #fff;
+}
+
+.active:after {
+	content: "\23F6";
 }
