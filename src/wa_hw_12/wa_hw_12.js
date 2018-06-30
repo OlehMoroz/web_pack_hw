@@ -1,5 +1,5 @@
 import './wa_hw_12.scss'
-import { fullAccordion } from './script/script';
+import { accordionFull } from './script/script';
 
 const element = document.querySelector('.accordion_element');
 const accordion = document.getElementsByClassName("accordion_title");
@@ -26,7 +26,7 @@ const itemsList = [
 
 for(let i = 0; i < itemsList.length; i++){
 
-    fullAccordion(element, itemsList[i]);
+    accordionFull(element, itemsList[i]);
 
     accordion[i].addEventListener('click', function() {
     let accordionBody = this.nextElementSibling;
