@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	font-family: 'Roboto';
+	font-size: 14px;
+	background: #455A64;
+}
+  
+.accordion {
+	width: 30%;
+	margin: 0 auto;
+	min-width: 200px;
+
+&_element {
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14);
+}
+
+&_title {
+	background-color: #009688;
+	border-radius: 0;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #fff;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 15px;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+&_body {
+	margin: 0;
+	background: #fff;
+	display: none;
+}
+
+&_title:after {
+    content: '\23F7';
+}
+}
+
+.title {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 30px;
+	font-weight: 300;
+}
+
+.text {
+	padding: 15px;
+}
+
+.triagles:after {
+	content: "\23F6";
+}
+
+.active {
+	display: block;
+}
