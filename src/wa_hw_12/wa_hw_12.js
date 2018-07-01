@@ -31,13 +31,17 @@ for(let i = 0; i < itemsList.length; i++){
     accordion[i].addEventListener('click', function() {
     let accordionBody = this.nextElementSibling;
     let activeAccordion = document.querySelector('.active');
-    if (activeAccordion === null) {
+    if (accordionBody === activeAccordion) {
+        accordionBody.classList.remove('active');
+        this.classList.remove("triagles");
+    } 
+    else if(accordionBody !== activeAccordion){
         accordionBody.classList.add('active');
         this.classList.add("triagles");
     } 
     else {
         accordionBody.classList.remove('active');
         this.classList.remove("triagles");
-    } 
+    }
   });
 }
