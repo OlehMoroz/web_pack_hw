@@ -1,40 +1,45 @@
 export function lamp (target) {
 
-    const container = document.createElement('div');
-    const circle = document.createElement('div');
-    const button = document.createElement('button');
-    const active_btn = 'active_btn';
-    const active_light = 'lamp_active__light';
+const lamp = document.createElement('div');
+lamp.classList.add('lamp');
 
-    container.classList.add('lamp');
-    circle.classList.add('lamp_light');
-    button.classList.add('lamp_button');
-    button.innerHTML = 'on/off';
+const circle = document.createElement('div');
+circle.classList.add('lamp_circle');
 
-    target.insertBefore(container, target.firstChild);
-    container.appendChild(circle);
-    container.appendChild(button);
+const button = document.createElement('button');
+button.classList.add('lamp_button');
+button.innerHTML = 'on/off'
 
-    function active () {
-        button.classList.add(active_btn);
-        container.classList.add('active');
+const buttonActive = 'active_button';
+const active_light = 'lamp_active__circle';
+
+target.insertBefore(lamp, target.firstChild);
+lamp.appendChild(circle);
+lamp.appendChild(button);
+
+button.addEventListener('click', function() {
+
+let control = lamp.querySelector('.active_button');
+    if (control === null){
+        lamp.classList.add('active');
         circle.classList.add(active_light);
-    }
-
-    function disable () {
-        button.classList.remove(active_btn);
-        container.classList.remove('active');
+        button.classList.add(buttonActive);
+        }
+    else {
+        lamp.classList.remove('active');
         circle.classList.remove(active_light);
-    }
-
-    button.addEventListener('click', () => {
-
-    let stat = container.querySelector('.active_btn');
-        if (stat === null){
-          active();
+        button.classList.remove(buttonActive);
         }
-        else {
-            disable(); 
-        }
+    });
+}
+
+export function addLamp (target){
+    const button = document.createElement('button');
+    button.classList.add('lamp_add');
+    button.innerHTML = 'Add lighter';
+
+    target.appendChild(button);
+    button.addEventListener('click', function() {
+        lamp(target);
     });
 }
