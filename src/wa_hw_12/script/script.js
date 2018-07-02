@@ -15,7 +15,6 @@ accordionElement.className = "accordion_element";
 const accordionTitle = document.createElement('div');
 accordionTitle.className = "accordion_title";
 
-
 const accordionTitleText = document.createElement('div');
 
 const accordionbody = document.createElement('div');
